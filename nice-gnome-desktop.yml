@@ -1,0 +1,6 @@
+---
+ - hosts: ubuntu
+
+   roles:
+
+   - gnome-desktop

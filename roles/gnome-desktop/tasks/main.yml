@@ -1,0 +1,4 @@
+---
+
+ - name: active dark theme for all gtk applications
+   copy: src='settings.ini' dest='{{ ansible_env.HOME }}/.config/gtk-3.0/settings.ini'
