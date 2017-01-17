@@ -1,12 +1,14 @@
 ---
 
  - name: remove evolution
+   become: yes
    apt: name={{item}} state=removed
    with_items:
     - evolution
     - evolution-common
 
  - name: install thunderbird
+   become: yes
    apt: name={{item}} state=latest
    with_items:
     - thunderbird

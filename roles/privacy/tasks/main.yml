@@ -1,5 +1,6 @@
 ---
  - name: install encrption software
+   become: yes
    apt: name={{item}} state=latest
    with_items:
     - gnupg
