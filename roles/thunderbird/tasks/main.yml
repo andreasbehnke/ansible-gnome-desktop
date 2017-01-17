@@ -1,0 +1,13 @@
+---
+
+ - name: remove evolution
+   apt: name={{item}} state=removed
+   with_items:
+    - evolution
+    - evolution-common
+
+ - name: install thunderbird
+   apt: name={{item}} state=latest
+   with_items:
+    - thunderbird
+    - enigmail
