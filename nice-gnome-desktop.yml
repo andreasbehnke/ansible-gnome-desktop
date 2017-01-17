@@ -3,5 +3,6 @@
 
    roles:
 
+   - privacy
    - gnome-desktop
    - thunderbird

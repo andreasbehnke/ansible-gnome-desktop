@@ -1,0 +1,8 @@
+---
+ - name: install encrption software
+   apt: name={{item}} state=latest
+   with_items:
+    - gnupg
+    - gnupg2
+    - pass
+    - openssh-client
