@@ -3,6 +3,7 @@
 
    roles:
 
+   - remote-access
    - privacy
    - gnome-desktop
    - thunderbird
