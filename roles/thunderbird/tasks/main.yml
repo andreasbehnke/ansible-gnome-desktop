@@ -12,4 +12,5 @@
    apt: name={{item}} state=latest
    with_items:
     - thunderbird
+    - thunderbird-locale-de 
     - enigmail
