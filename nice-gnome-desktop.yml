@@ -1,5 +1,8 @@
 ---
- - hosts: ubuntu
+ - hosts: all
+
+   pre_tasks:
+    - debug: msg="{{ ansible_distribution }} - {{ ansible_distribution_release }} - {{ ansible_distribution_version }}"
 
    roles:
 
