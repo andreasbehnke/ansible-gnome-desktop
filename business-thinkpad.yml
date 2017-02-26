@@ -4,6 +4,6 @@
    roles:
 
    - remote-access
-   - privacy
-   - gnome-desktop
    - thunderbird
+   - java-runtime
+   - thinkfinger
