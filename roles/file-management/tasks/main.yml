@@ -1,0 +1,7 @@
+---
+
+ - name: install tools for file management
+   become: yes
+   apt: name={{ item }} state=latest
+   with_items:
+    - baobab
