@@ -1,0 +1,10 @@
+---
+ - hosts: all
+
+   roles:
+
+   - remote-access
+   - thunderbird
+   - java-runtime
+   - thinkfinger
+   - file-management

@@ -1,0 +1,9 @@
+---
+
+  - name: install partner repository
+    become: yes
+    apt_repository: repo="deb http://archive.canonical.com/ubuntu {{ansible_distribution_release}} partner" state="present"
+
+  - name: install skype from partner repository
+    become: yes
+    apt: name=skype state=latest

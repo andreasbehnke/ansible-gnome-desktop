@@ -1,0 +1,13 @@
+---
+
+ - name: install thinkfinger repository
+   become: yes
+   apt_repository: repo="ppa:fingerprint/fingerprint-gui"
+
+ - name: install thinkfinger
+   become: yes
+   apt: name={{item}} state=latest
+   with_items:
+    - libbsapi
+    - policykit-1-fingerprint-gui
+    - fingerprint-gui

@@ -1,0 +1,8 @@
+---
+
+ - name: install openjdk jre
+   become: yes
+   apt: name={{ item }} state=latest
+   with_items:
+    - openjdk-8-jre
+    - icedtea-netx
