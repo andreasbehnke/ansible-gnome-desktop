@@ -1,0 +1,5 @@
+---
+
+ - name: install loook
+   become: yes
+   apt: name=loook state=latest
