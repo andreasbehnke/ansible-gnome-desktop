@@ -1,0 +1,24 @@
+---
+
+ - name: remove openjdk jre
+   become: yes
+   apt: name={{ item }} state=absent
+   with_items:
+    - openjdk-8-jre
+    - icedtea-netx
+
+ - name: ensure the webupd8 launchpad apt repository is present
+   become: yes
+   apt_repository: repo=ppa:webupd8team/java update_cache=yes state=present
+
+ - name: accept Oracle license
+   become: yes
+   changed_when: no
+   shell: "echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections"
+
+ - name: install oracle java 8
+   become: yes
+   apt: name={{ item }} state=latest
+   with_items:
+    - oracle-java8-installer
+    - oracle-java8-set-default
