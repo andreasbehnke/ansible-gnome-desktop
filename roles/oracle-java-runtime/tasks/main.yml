@@ -1,12 +1,5 @@
 ---
 
- - name: remove openjdk jre
-   become: yes
-   apt: name={{ item }} state=absent
-   with_items:
-    - openjdk-8-jre
-    - icedtea-netx
-
  - name: ensure the webupd8 launchpad apt repository is present
    become: yes
    apt_repository: repo=ppa:webupd8team/java update_cache=yes state=present
