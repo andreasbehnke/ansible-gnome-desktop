@@ -5,6 +5,6 @@
 
    - remote-access
    - thunderbird
-   - java-runtime
+   - oracle-java-runtime # need to use oracle java because of much butter support for java web start technologie required by business software
    - thinkfinger
    - file-management
