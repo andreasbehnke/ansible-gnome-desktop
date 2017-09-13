@@ -12,6 +12,6 @@
    - privacy
    - gnome-desktop
    - thunderbird
-   - skype
+   #- skype there is no installation candidate in partner repository
    - file-management
    - desktop-search
