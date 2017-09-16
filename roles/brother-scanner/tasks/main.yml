@@ -1,0 +1,17 @@
+---
+
+ - name: install dependencies for brother scanner package
+   become: yes
+   apt: name=libusb-0.1-4 state=latest
+
+ - name: install brother scanner package
+   become: yes
+   apt: deb={{brother_scanner_package_url}}
+
+ - name: configure scanner - remove old configuration
+   become: yes
+   command: brsaneconfig4 -r {{brother_scanner_name}}
+
+ - name: configure scanner
+   become: yes
+   command: brsaneconfig4 -a name={{brother_scanner_name}} model={{brother_scanner_model}} nodename={{brother_scanner_host_name}}

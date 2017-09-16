@@ -15,3 +15,5 @@
    #- skype there is no installation candidate in partner repository
    - file-management
    - desktop-search
+   # HARDWARE
+   - brother-scanner
