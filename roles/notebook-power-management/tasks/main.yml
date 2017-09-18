@@ -1,0 +1,13 @@
+---
+
+ - name: ensure the tpl apt repository is present
+   become: yes
+   apt_repository: repo=ppa:linrunner/tlp update_cache=yes state=present
+
+ - name: install power management tools
+   become: yes
+   apt: name={{item}} state=latest
+   with_items:
+     - powertop
+     - tlp
+     - tlp-rdw
