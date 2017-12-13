@@ -8,3 +8,7 @@
 
  - name: active week numbers in calendar applet
    command: gsettings set org.gnome.desktop.calendar show-weekdate true
+
+ - name: disable horrible ubuntu colortheme for login screen
+   become: yes
+   command: update-alternatives --set gdm3.css /usr/share/gnome-shell/theme/gnome-shell.css
