@@ -8,7 +8,7 @@
 
    roles:
 
-   - remote-access
+   #- remote-access
    - privacy
    - gnome-desktop
    - thunderbird
