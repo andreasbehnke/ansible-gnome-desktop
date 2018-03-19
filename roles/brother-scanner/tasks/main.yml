@@ -15,3 +15,7 @@
  - name: configure scanner
    become: yes
    command: brsaneconfig4 -a name={{brother_scanner_name}} model={{brother_scanner_model}} nodename={{brother_scanner_host_name}}
+
+ - name: enable brother scanner in saned
+   become: yes
+   lineinfile: path=/etc/sane.d/dll.conf line=brother4 state=present
