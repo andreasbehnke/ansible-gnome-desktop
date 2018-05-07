@@ -1,5 +1,9 @@
 ---
 
+ - name: install ubuntu gnome desktop
+   become: yes
+   apt: name=ubuntu-gnome-desktop state=latest
+      
  - name: active dark theme for all gtk applications
    copy: src='settings.ini' dest='{{ ansible_env.HOME }}/.config/gtk-3.0/settings.ini'
 
