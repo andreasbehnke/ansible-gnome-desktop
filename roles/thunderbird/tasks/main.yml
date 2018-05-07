@@ -2,7 +2,7 @@
 
  - name: remove evolution
    become: yes
-   apt: name={{item}} state=removed
+   apt: name={{item}} state=absent
    with_items:
     - evolution
     - evolution-common
@@ -12,5 +12,5 @@
    apt: name={{item}} state=latest
    with_items:
     - thunderbird
-    - thunderbird-locale-de 
+    - thunderbird-locale-de
     - enigmail
