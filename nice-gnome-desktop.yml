@@ -1,20 +1,19 @@
 ---
  - hosts: all
    pre_tasks:
-
    - name: update packages
      become: yes
      apt: update_cache='yes'
 
    roles:
 
-   #- remote-access
+   - remote-access
    - privacy
    - gnome-desktop
    - thunderbird
    #- skype there is no installation candidate in partner repository
    - file-management
-   - desktop-search
+   #- desktop-search
    # HARDWARE
    - brother-scanner
    #- notebook-power-management
