@@ -1,0 +1,3 @@
+---
+  - import_playbook: nice-gnome-desktop.yml
+  - import_playbook: notebooks.yml

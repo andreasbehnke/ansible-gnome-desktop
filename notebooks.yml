@@ -1,0 +1,5 @@
+---
+ - hosts: notebooks
+
+   roles:
+   - notebook-power-management
