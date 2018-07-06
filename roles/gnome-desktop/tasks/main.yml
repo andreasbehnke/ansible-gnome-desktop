@@ -6,6 +6,8 @@
    with_items:
      - gnome-session
      - gdm3
+     - gnome-shell-extensions
+     - gnome-tweak-tool
 
  - name: active dark theme for all gtk applications
    copy: src='settings.ini' dest='{{ ansible_env.HOME }}/.config/gtk-3.0/settings.ini'
